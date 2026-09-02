@@ -1,0 +1,121 @@
+s · CSS
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+ 
+body {
+    background-color: rgb(243, 239, 239);
+    color: #070707;
+}
+ 
+header {
+    background: #222;
+    padding: 15px 30px;
+    border-radius: 0 0 20px 20px;
+    display: flex;
+    flex-direction: column;
+}
+ 
+header h1 {
+    color: rgb(0, 0, 0);
+    margin-bottom: 10px;
+}
+ 
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+ 
+nav a {
+    color: rgb(27, 27, 27);
+    text-decoration: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: background-color 0.2s;
+}
+ 
+nav a:hover {
+    background-color: #0060df;
+}
+ 
+
+section {
+    background: white;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+ 
+section h1 {
+    color: #0060df;
+    margin-bottom: 12px;
+}
+ 
+section p {
+    margin-bottom: 8px;
+    line-height: 1.6;
+}
+ 
+article {
+    display: inline-block;
+    width: 30%;
+    min-width: 180px;
+    background: #0060df;
+    color: white;
+    margin: 5px;
+    padding: 15px;
+    border-radius: 8px;
+    vertical-align: top;
+}
+ 
+aside {
+    position: relative;
+    background: #f2f2f2;
+    padding: 15px;
+    margin-top: 15px;
+    border-radius: 8px;
+    border-left: 4px solid #0060df;
+}
+ 
+aside ul {
+    list-style: none;
+    margin-top: 8px;
+}
+ 
+aside a {
+    color: #0060df;
+    text-decoration: none;
+}
+ 
+/* ========== 7. FOOTER con FLEXBOX centrado ========== */
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 20px 20px 0 0;
+}
+ 
+footer nav {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 10px 0;
+}
+ 
+footer a {
+    color: #0060df;
+    text-decoration: none;
+}
+ 
+footer a:hover {
+    color: rgb(31, 29, 165);
+}
+ 
