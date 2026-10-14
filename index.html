@@ -1,30 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>html5</title>
-   
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Envío de Correo</title>
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
-
 <body>
+  <main class="page">
+    <section class="card">
+      <!-- Encabezado con logo -->
+      <header class="card__header">
+        <img src="assets/logo.svg" alt="Logo" class="card__logo" />
+        <h1 class="card__title">Envío de Correo</h1>
+        <p class="card__subtitle">Formulario de contacto institucional</p>
+      </header>
 
-    <h1>Barrientos Lopez Gonzalo Fernando</h1>
-    <h1>Estudiante de ingenieria de sistemas</h1>
-    <nav>
-        <ul>
-            <li><a href="">Enlace 1</a></li>
-            <li><a href="">Enlace 2</a></li>
-            <li><a href="">Enlace 3</a></li>
-        </ul>
-    </nav>
-    <footer>
-        <p>&copy; 2026 Mi Sitio Wed. Todos los derechos reservados</p>
-            <nav>
-                <a href="index.html">inicio</a>
-                <a href="html5.html">html5</a>
-                <a href="css.html">css</a>
-            </nav>
-        </footer>
+      <!-- Formulario -->
+      <form id="contact-form" class="form" novalidate>
+        <div class="form__group">
+          <label for="from_name">Nombre completo <span class="req">*</span></label>
+          <input type="text" id="from_name" name="from_name" placeholder="Ej: Juan Pérez" autocomplete="name" />
+          <span class="form__error" data-error-for="from_name"></span>
+        </div>
+
+        <div class="form__group">
+          <label for="to_email">Correo electrónico <span class="req">*</span></label>
+          <input type="email" id="to_email" name="to_email" placeholder="Ej: estudiante@correo.com" autocomplete="email" />
+          <span class="form__error" data-error-for="to_email"></span>
+        </div>
+
+        <div class="form__group">
+          <label for="subject">Asunto <span class="req">*</span></label>
+          <input type="text" id="subject" name="subject" placeholder="Ej: Solicitud de información" />
+          <span class="form__error" data-error-for="subject"></span>
+        </div>
+
+        <div class="form__group">
+          <label for="message">Mensaje <span class="req">*</span></label>
+          <textarea id="message" name="message" rows="5" placeholder="Escribe tu mensaje (mínimo 10 caracteres)"></textarea>
+          <span class="form__error" data-error-for="message"></span>
+        </div>
+
+        <button type="submit" id="submit-btn" class="btn">Enviar correo</button>
+      </form>
+
+      <p class="card__note"><span class="req">*</span> Campos obligatorios</p>
+    </section>
+  </main>
+
+  <!-- Notificaciones (toast) -->
+  <div id="toast-container" class="toast-container" aria-live="polite"></div>
+
+  <!-- SDK de EmailJS por CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <!-- Lógica de la aplicación -->
+  <script src="js/app.js"></script>
 </body>
 </html>
